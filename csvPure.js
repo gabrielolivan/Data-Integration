@@ -1,4 +1,6 @@
 const fs = require('fs')
+const Database = require('./db/db')
+const createElement = require('./db/createElement');
 
 fs.readFile('q1_catalog.csv', 'utf-8', (err, data) => {
     if (err) throw err;
@@ -7,5 +9,25 @@ fs.readFile('q1_catalog.csv', 'utf-8', (err, data) => {
         return x.split(';')
     })
 
-    console.log(dado)
-  });
+    Database.then(async (db) => {
+
+        dado.map(async (y, index) => {
+
+            if(index == 0) return null
+            
+            elementValue = {
+                name: y[0].toUpperCase(),
+                zip: y[1].substring(0,5)
+            }
+            console.log(elementValue)
+            await createElement(db, elementValue)
+    
+        })
+
+        //const selectedElements = await db.all("SELECT * FROM companies")
+        //console.log(selectedElements)
+
+    })
+
+    //console.log(dado)
+});
