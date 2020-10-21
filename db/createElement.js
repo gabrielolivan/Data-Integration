@@ -5,12 +5,12 @@ module.exports = async function(db, elValue) {
             name,
             zip
         ) VALUES (
-            "${elValue.name}",
-            "${elValue.zip}"
+            ${elValue.name},
+            ${elValue.zip}
         );
     `)
 
 
-    // aqui vou executar todos os db runs() das class_schedules
+    // aqui vou executar todos os db runs()
     await Promise.all(inserindoCompany)
 }
