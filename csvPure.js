@@ -21,7 +21,7 @@ fs.readFile('q1_catalog.csv', 'utf-8', (err, data) => {
             }
 
         })
-        
+        data.filter(function(el){return el!=null})
         console.log(data)
            
      
@@ -30,7 +30,7 @@ fs.readFile('q1_catalog.csv', 'utf-8', (err, data) => {
             await createElement(db, data) 
             
         } catch (error) {
-            console.log(error);
+            //console.log(error);
         }
 
 
