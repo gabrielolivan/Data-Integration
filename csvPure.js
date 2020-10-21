@@ -12,31 +12,39 @@ fs.readFile('q1_catalog.csv', 'utf-8', (err, data) => {
 
     Database.then(async (db) => {
 
-        dado.map(async (y, index) => {
+        const data = dado.map( (y, index) => {
 
             if(index == 0) return null
-            if(index < 3) {
-                try {
-                    elementValue = {
-                        name: y[0].toUpperCase(),
-                        zip: y[1].substring(0,5)
-                    }
-                    
-                    console.log(elementValue)
-                    
-                    await createElement(db, elementValue)
+            return {
+                name: y[0].toUpperCase(),
+                zip: y[1].substring(0,5)
+            }
 
-                } catch (error) {
-                    console.log(error)
-                }
-            } else {null}
-            
         })
+        
+        console.log(data)
+           
+     
+        try {
+            
+            await createElement(db, data) 
+            
+        } catch (error) {
+            console.log(error);
+        }
+
+
+
+
+            
+            
+        
 
         //const selectedElements = await db.all("SELECT * FROM companies")
         //console.log(selectedElements)
 
-    })
 
     //console.log(dado)
+    })
+
 });

@@ -9,9 +9,7 @@
   "author": "Gabriel Olivan",
   "license": "ISC",
   "dependencies": {
-    "csv-parser": "^2.3.3",
     "fs": "0.0.1-security",
-    "sequelize": "^6.3.5",
     "sqlite": "^4.0.15",
     "sqlite-async": "^1.1.0",
     "sqlite3": "^5.0.0"
