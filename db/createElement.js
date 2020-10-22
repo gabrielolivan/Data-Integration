@@ -4,18 +4,16 @@ module.exports = async function(db, elValue) {
         const inserindoCompany = await db.run(`
             INSERT INTO companies (
                 name,
-                zip
+                zip,
+                website
             ) VALUES (
                 "${elValue.name}",
-                "${elValue.zip}"
+                "${elValue.zip}",
+                "${elValue.website}"
             );
         `)
 
     } catch (error) {
         console.log(error)
     }
-
-
-    // aqui vou executar todos os db runs()
-    //await Promise.all(inserindoCompany)
 }
