@@ -1,14 +1,16 @@
-const csv = require('csv-parser')
-const fs = require('fs')
+const express = require('express')
+const app = express()
+const csvPure = require('./src/csvPure')
+const rotaName = require('./routes/name')
+const rotaUpdate = require('./routes/update')
 
-const results = [];
+csvPure
 
-fs.createReadStream('q1_catalog.csv')
-    .pipe(csv({
-        separator: ';',
-    }))
-    .on('data', (data) => results.push(data))
-    .on('end', () => {
-      console.log(results);
-      
-});
+app.use('/name', rotaName)
+app.use('/update', rotaUpdate)
+
+app.listen(()=> {
+    console.log('Servidor funcionando...')
+})
+
+module.exports = app

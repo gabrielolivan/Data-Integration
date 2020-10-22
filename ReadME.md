@@ -1,0 +1,12 @@
+Para rodar o programa:
+1 - abra o prompt de comando na pasta onde está o arquivo "server.js"
+2 - digite no prompt "node server.js"
+    Este comando já irá ler o arquivo 'q1_catalog.csv' e criar o banco de dados
+
+Para dar o update no banco de dados
+1 - coloque o arquivo desejado na pasta 'csvFiles"
+2 - após o servidor estar funcionando utilize o método POST para atualizar o banco de dados
+3 - POST - localhost:3000/update/"nome do arquivo inserido"
+    Obs.: utilizar o nome do arquivo com a extensão, nesse caso ".csv"
+    No challenge o arquivo utilizado foi o q2_clienteData.csv
+4 - verificar a inserção dos dados no banco.

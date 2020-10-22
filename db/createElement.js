@@ -1,21 +1,19 @@
 module.exports = async function(db, elValue) {
-    // inserir dados na tabela de companie
+    // inserir dados na tabela de companies
     try {
         const inserindoCompany = await db.run(`
             INSERT INTO companies (
                 name,
-                zip
+                zip,
+                website
             ) VALUES (
                 "${elValue.name}",
-                "${elValue.zip}"
+                "${elValue.zip}",
+                "${elValue.website}"
             );
         `)
 
     } catch (error) {
-        console.log(error)
+        //console.log(error)
     }
-
-
-    // aqui vou executar todos os db runs()
-    //await Promise.all(inserindoCompany)
 }
