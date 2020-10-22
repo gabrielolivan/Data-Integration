@@ -14,7 +14,3 @@ function execute (db) {
 }
 
 module.exports = Database.open(__dirname + '/Database.sqlite').then(execute)
-
-// Criar API POST para receber o arquivo CSV
-// Ler este arquivo usando csvPure.js e verificar elemento pelo NOME e não pelo ID
-// se o NOME não existir, ignorar o dado
