@@ -5,8 +5,8 @@ module.exports = async function(db, elValue) {
             name,
             zip
         ) VALUES (
-            '${elValue.name}',
-            ${elValue.zip}
+            "${elValue.name}",
+            "${elValue.zip}"
         );
     `)
 
