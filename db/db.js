@@ -6,7 +6,8 @@ function execute (db) {
         CREATE TABLE IF NOT EXISTS companies (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT,
-            zip INTEGER
+            zip INTEGER,
+            UNIQUE(name)
         );
     `)
 }

@@ -21,11 +21,12 @@ fs.readFile('q1_catalog.csv', 'utf-8', (err, data) => {
                     name: y[0].toUpperCase(),
                     zip: y[1].substring(0, 5)
                 }
-
+                
                 await createElement(db, register)
+                
 
             } catch (error) {
-                console.error(error, index, register);
+                console.error(error, index, register)
             }
         })
          
