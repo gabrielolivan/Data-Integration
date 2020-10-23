@@ -6,7 +6,7 @@ module.exports = async function(db, elValue) {
             SET website = "${elValue.website}"
             WHERE name = "${elValue.name}";
         `)
-        console.log(elValue.name + 'inseriu/atualizou o email para: ' + elValue.website)
+        console.log('[E-mail inserido/atualizado de : ' + elValue.name + ' ] : ' + elValue.website)
 
     } catch (error) {
         console.log(error)

@@ -16,6 +16,6 @@ module.exports = async function(db, elValue) {
                
 
     } catch (error) {
-        console.log(elValue.name + 'já existe no banco de dados')
+        console.log('[Dado já existe no banco]: ' + elValue.name)
     }
 }
