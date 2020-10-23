@@ -7,9 +7,11 @@ function execute (db) {
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT,
             zip INTEGER,
+            website TEXT,
             UNIQUE(name)
         );
     `)
 }
 
-module.exports = Database.open(__dirname + '/database.sqlite').then(execute)
+module.exports = Database.open(__dirname + '/Yawoen.sqlite').then(execute)
+
