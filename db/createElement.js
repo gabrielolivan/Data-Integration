@@ -1,4 +1,4 @@
-module.exports = async function(db, elValue) {
+module.exports = async (db, elValue) => {
     // inserir dados na tabela de companies
     try {
         const inserindoCompany = await db.run(`

@@ -1,4 +1,4 @@
-module.exports = async function(db, elValue) {
+module.exports = async (db, elValue) => {
     // Atualizando dados na tabela de companies
     try {
         const uptadeCompany = await db.run(`
@@ -6,11 +6,9 @@ module.exports = async function(db, elValue) {
             SET website = "${elValue.website}"
             WHERE name = "${elValue.name}";
         `)
-        console.log('[E-mail inserido/atualizado de : ' + elValue.name + ' ] : ' + elValue.website)
+        console.log('[E-mail inserido/atualizado de : ' + elValue.name + '] : ' + elValue.website)
 
     } catch (error) {
         console.log(error)
     }
-
-    
 }

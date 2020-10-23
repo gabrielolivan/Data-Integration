@@ -3,11 +3,32 @@ const router = express.Router()
 const updateFile = require('../src/update')
 const searchByZip = require('../db/searchByZip')
 const searchByName = require('../db/searchByName')
+const searchElement = require('../db/searchElement')
 
 router.get('/',(req, res) => {
     res.status(200).send({
-        mensagem: 'GET dentro do nome'
+        mensagem: 'GET dentro da api'
     })
+})
+
+router.get('/search', async (req, res) => {
+    console.log('\n\nConsulta por NAME e ZIP\n\n')
+    
+    const name = req.query.name
+    const zip = req.query.zip
+    
+    register = await searchElement(name, zip)
+
+    res.status(200).send( register.map((a) => {
+        return {
+            id: a.id,
+            name: a.name,
+            zip: a.zip,
+            website: a.website
+        }
+    }))
+        
+    
 })
 
 router.get('/name/:name', async (req, res) => {

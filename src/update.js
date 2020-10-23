@@ -4,7 +4,8 @@ const updateElement = require('../db/updateElement')
 
 //const file = '../csvFiles/q2_clientData.csv'
 
-function updateFile(file){ fs.readFile(file, 'utf-8', (err, data) => {
+updateFile = (file) => { 
+    fs.readFile(file, 'utf-8', (err, data) => {
     if (err) throw err;
 
     var dado = data.split('\n').map((x) => {

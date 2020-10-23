@@ -1,6 +1,6 @@
 const Database = require('sqlite-async')
 
-function execute (db) {
+execute = (db) => {
     //Criar as tabelas do banco do dados
     return db.exec(`
         CREATE TABLE IF NOT EXISTS companies (

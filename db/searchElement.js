@@ -1,8 +1,8 @@
 const Database = require('./db')
 
-module.exports = searchByZip = async (req) => {
-    
-    const query = `SELECT * FROM companies WHERE zip LIKE "%${req}%"`
+module.exports =  searchElement = async (name, zip) => {
+     
+    const query = `SELECT * FROM companies WHERE name LIKE "%${name}%" AND zip LIKE "%${zip}%"`
 
     try {
         const db = await Database
