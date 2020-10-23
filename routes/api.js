@@ -10,30 +10,40 @@ router.get('/',(req, res) => {
     })
 })
 
-router.get('/name/:name',(req, res) => {
-    console.log('\n\nConsulta por Name\n\n')
-    const name = req.params.name.toUpperCase()
+router.get('/name/:name', async (req, res) => {
+    console.log('\n\nConsulta por NAME\n\n')
+    const name = req.params.name
     
-    register = searchByName(name)
+    register = await searchByName(name)
 
-    console.log(register)
-
-    res.status(200).send(
-        register
-    )
+    res.status(200).send( register.map((a) => {
+        return {
+            id: a.id,
+            name: a.name,
+            zip: a.zip,
+            website: a.website
+            }
+    }))
+        
+    
 })
 
-router.get('/zip/:zip',(req, res) => {
+router.get('/zip/:zip', async (req, res) => {
     console.log('\n\nConsulta por ZIP\n\n')
     const zip = req.params.zip
     
-    register = searchByZip(zip)
+    register = await searchByZip(zip)
 
-    console.log(register)
-
-    res.status(200).send(
-        register
-    )
+    res.status(200).send( register.map((a) => {
+        return {
+            id: a.id,
+            name: a.name,
+            zip: a.zip,
+            website: a.website
+            }
+    }))
+        
+    
 })
 
 

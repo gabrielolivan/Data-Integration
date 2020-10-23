@@ -1,5 +1,5 @@
 const Database = require('./db')
-
+/*
 function searchByZip(zip){ Database.then(async (db) => {
 
     try {
@@ -24,3 +24,20 @@ function searchByZip(zip){ Database.then(async (db) => {
 }
 
 module.exports = searchByZip
+*/
+
+module.exports = async function searchByZip(req){
+    
+    
+    const query = `SELECT * FROM companies WHERE zip LIKE "%${req}%"`
+
+    try {
+        const db = await Database
+        const companies = await db.all(query)
+        console.log(companies)
+        return companies
+
+    } catch (error) {
+        console.log(error)
+    }
+}
