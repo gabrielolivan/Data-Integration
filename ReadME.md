@@ -29,3 +29,4 @@
 
 ### Procurando pelo ZIP:
 - **GET** - localhost:3000/api/zip/"zip"
+
