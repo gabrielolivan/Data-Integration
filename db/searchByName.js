@@ -4,18 +4,16 @@ function searchByName(name){ Database.then(async (db) => {
 
     try {
         let register
-        db.each(`SELECT * FROM companies`, 
+        await db.each(`SELECT * FROM companies WHERE name LIKE "%${name}%"`, 
             (error, row) => {
-                if(row.name.match(name)){
-                    console.log(`${row.name}, ${row.zip}, ${row.website}`);
-                    register = {
-                        id: row.id,
-                        name: row.name,
-                        zip: row.zip,
-                        website: row.website
-                    }
+                console.log(`${row.name}, ${row.zip}, ${row.website}`);
+                register = {
+                    id: row.id,
+                    name: row.name,
+                    zip: row.zip,
+                    website: row.website
                 }
-            });
+            })
 
     } catch (error) {
         console.log(error)

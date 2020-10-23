@@ -4,7 +4,7 @@ function searchByZip(zip){ Database.then(async (db) => {
 
     try {
         let register
-        db.each(`SELECT * FROM companies WHERE zip LIKE "%${zip}%"`, 
+        await db.each(`SELECT * FROM companies WHERE zip LIKE "%${zip}%"`, 
             (error, row) => {
                 console.log(`${row.name}, ${row.zip}, ${row.website}`);
                 register = {
@@ -13,7 +13,7 @@ function searchByZip(zip){ Database.then(async (db) => {
                     zip: row.zip,
                     website: row.website
                 }
-            });
+            })
 
     } catch (error) {
         console.log(error)
