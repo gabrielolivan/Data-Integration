@@ -12,10 +12,10 @@ module.exports = async (db, elValue) => {
                 "${elValue.website}"
             );
         `)
-        console.log('Dados adicionados ao banco: [' + elValue.name + '; ' + elValue.zip + ']')
+        //console.log('Dados adicionados ao banco: [' + elValue.name + '; ' + elValue.zip + ']')
                
 
     } catch (error) {
-        console.log('[Dado já existe no banco]: ' + elValue.name)
+        //console.log('[Dado já existe no banco]: ' + elValue.name)
     }
 }

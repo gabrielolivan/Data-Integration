@@ -1,6 +1,5 @@
 const Database = require('sqlite-async')
 require('dotenv').config()
-console.log(process.env.NODE_ENV)
 
 var databaseName = "Yaowen"
 if ( process.env.NODE_ENV === 'test' ) {

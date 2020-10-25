@@ -10,7 +10,7 @@ csvPure('q1_catalog.csv')
 app.use('/api', rotaApi)
 
 app.listen(()=> {
-    console.log('Servidor funcionando...')
+    console.log('server listening in port 3000')
 })
 
 module.exports = app
