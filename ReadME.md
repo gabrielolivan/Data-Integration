@@ -44,4 +44,4 @@
         - Coletando informação utilizando a api pelo método GET pelo NAME e ZIP
         - Inserindo arquivo teste.csv utilizando a api pelo método POST e verificando se o elemento consta no db
 
-### Testes precisam ser melhorados.
+#### Obs.: Testes precisam ser melhorados.
