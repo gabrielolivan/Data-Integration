@@ -7,7 +7,11 @@
 
 ## Para rodar o programa:
 - Abra o prompt de comando na pasta "raiz" do projeto.
-- Digite no prompt "npm start"
+- Para iniciar no Windows: 
+    - Digite no prompt "npm start"
+- Para iniciar no Linux:
+    - Digite no prompt "npm linux"
+    
     - Este comando já irá iniciar o servidor e ler o arquivo 'q1_catalog.csv' e criar o banco de dados.
 
 ## Para dar o update no banco de dados [somente update do website]
