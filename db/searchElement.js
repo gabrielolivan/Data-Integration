@@ -7,7 +7,6 @@ module.exports =  searchElement = async (name, zip) => {
     try {
         const db = await Database
         const companies = await db.all(query)
-        console.log(companies)
         return companies
 
     } catch (error) {

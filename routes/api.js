@@ -12,7 +12,7 @@ router.get('/',(req, res) => {
 })
 
 router.get('/search', async (req, res) => {
-    console.log('\n\nConsulta por NAME e ZIP\n\n')
+    //console.log('\n\nConsulta por NAME e ZIP\n\n')
     
     const name = req.query.name
     const zip = req.query.zip
@@ -32,7 +32,7 @@ router.get('/search', async (req, res) => {
 })
 
 router.get('/name/:name', async (req, res) => {
-    console.log('\n\nConsulta por NAME\n\n')
+    //console.log('\n\nConsulta por NAME\n\n')
     const name = req.params.name
     
     register = await searchByName(name)
@@ -50,7 +50,7 @@ router.get('/name/:name', async (req, res) => {
 })
 
 router.get('/zip/:zip', async (req, res) => {
-    console.log('\n\nConsulta por ZIP\n\n')
+    //console.log('\n\nConsulta por ZIP\n\n')
     const zip = req.params.zip
     
     register = await searchByZip(zip)
@@ -69,11 +69,11 @@ router.get('/zip/:zip', async (req, res) => {
 
 
 
-router.post('/update/:csvFiles', (req, res) => {
-    console.log('\n\nInserindo/Atualizando dados...\n\n')
+router.post('/update/:csvFiles', async (req, res) => {
+    //console.log('\n\nInserindo/Atualizando dados...\n\n')
     const file = './csvFiles/' + req.params.csvFiles
 
-    updateFile(file)
+    await updateFile(file)
 
     
     res.status(201).send({

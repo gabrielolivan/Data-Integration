@@ -3,7 +3,9 @@ const app = express()
 const csvPure = require('./src/csvPure')
 const rotaApi = require('./routes/api')
 
-csvPure
+
+
+csvPure('q1_catalog.csv')
 
 app.use('/api', rotaApi)
 

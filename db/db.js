@@ -1,5 +1,10 @@
 const Database = require('sqlite-async')
 
+var databaseName = "Yaowen"
+if ( process.env.NODE_ENV === 'test' ) {
+    databaseName = "test-database"
+}
+
 execute = (db) => {
     //Criar as tabelas do banco do dados
     return db.exec(`
@@ -13,5 +18,5 @@ execute = (db) => {
     `)
 }
 
-module.exports = Database.open(__dirname + '/Yawoen.sqlite').then(execute)
+module.exports = Database.open(__dirname + `/${databaseName}.sqlite`).then(execute)
 
