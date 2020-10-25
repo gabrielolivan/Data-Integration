@@ -5,7 +5,7 @@
   "main": "teste2.js",
   "scripts": {
     "start": "SET NODE_ENV=start && node -r dotenv/config server.js",
-    "linux": "EXPORT NODE_ENV=start && node -r dotenv/config server.js",
+    "linux": "export NODE_ENV=start && node -r dotenv/config server.js",
     "test": "mocha --delay --full-trace -r dotenv/config"
   },
   "author": "Gabriel Olivan",
