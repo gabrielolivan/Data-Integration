@@ -43,5 +43,12 @@
         - Coletando informação utilizando a api pelo método GET pelo ZIP
         - Coletando informação utilizando a api pelo método GET pelo NAME e ZIP
         - Inserindo arquivo teste.csv utilizando a api pelo método POST e verificando se o elemento consta no db
+    
+- Teste utilizou os seguintes parâmetros de busca:
+    - NAME: "tola"
+    - ZIP: "229"
+    - WEBSITE: "teste.com"
+    - CSV_FILE: "teste.csv"
+    - URL: "http://localhost:3000"
 
 #### Obs.: Testes precisam ser melhorados.
