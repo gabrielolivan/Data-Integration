@@ -2,8 +2,6 @@ const fs = require('fs')
 const Database = require('../db/db')
 const createElement = require('../db/createElement')
 
-//const file = '../csvFiles/q1_catalog.csv'
-
 readFile = (file) => {
     fs.readFile('./csvFiles/' + file, 'utf-8', (err, data) => {
         if (err) throw err;
@@ -37,6 +35,5 @@ readFile = (file) => {
 
     });
 }
-
 
 module.exports = readFile
