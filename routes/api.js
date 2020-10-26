@@ -53,9 +53,9 @@ router.get('/zip/:zip', async (req, res) => {
 
 router.post('/update/:csvFiles', async (req, res) => {
     const file = './csvFiles/' + req.params.csvFiles
-    await updateFile(file)
+    register = await updateFile(file)
     res.status(201).send({
-        mensagem: 'POST Called', 
+        mensagem: "POST called and updated data"
     })
 })
 

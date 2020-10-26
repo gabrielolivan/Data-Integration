@@ -24,7 +24,7 @@ updateFile = (file) => {
                         website: y[2].toLowerCase()
                     }
                     
-                    await updateElement(db, register)
+                    await updateElement(db, register)                    
                     
                 } catch (error) {
                     console.error(error, index, register)

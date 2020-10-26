@@ -8,7 +8,6 @@ chai.use(chaihttp)
 
 teste = (name,zip,website,file,url) => {
     before(() => {
-        console.log(process.env.NODE_ENV)
         server
     })
     after(() => {

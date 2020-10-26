@@ -30,7 +30,7 @@ readFile = (file) => {
                     console.error(error, index, register)
                 }
             })
-            console.log('\n\n')
+            console.log('\n')
         })
 
     });
