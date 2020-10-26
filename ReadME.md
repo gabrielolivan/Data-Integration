@@ -3,9 +3,9 @@
 ## instalação necessária:
 - Instale o NODE.jS.
 - Ao clonar o arquivo certifique-se que exista um arquivo chamado ".env" na pasta "raiz", caso não haja, seguir os passos abaixo:
-    - Crie um arquivo chamado "**.env**" e abra-o;
-    - Escreva a seguinte linha de código: **NODE_ENV=test**;
-    - Salve;
+    - Crie um arquivo chamado "**.env**" e abra-o
+    - Escreva a seguinte linha de código: **NODE_ENV=test**
+    - Salve
 - Abra o prompt de comando na pasta "raiz" do projeto e digite "npm install".
     - Aqui será instalado tudo que foi necessário para realização do projeto.
 
