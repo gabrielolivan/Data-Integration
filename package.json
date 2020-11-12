@@ -2,7 +2,7 @@
   "name": "data-integration-challenge",
   "version": "1.0.0",
   "description": "",
-  "main": "teste2.js",
+  "main": "Data-Integration.js",
   "scripts": {
     "start": "SET NODE_ENV=start && node -r dotenv/config server.js",
     "linux": "export NODE_ENV=start && node -r dotenv/config server.js",
