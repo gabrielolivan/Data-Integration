@@ -53,15 +53,16 @@ teste = (name,zip,website,file,url) => {
             .send()
             .end((error, response, body) => {
                 expect(response.statusCode).to.equal(201)
+                done()
             })
-        done()
+            
         })
         it(`Usando método GET da api para procurar pelo NAME "${name}" e ZIP "${zip}": http://localhost:3000/api/search?name=${name}&zip=${zip}`, (done) => {
             request(url + `/api/search?name=${name}&zip=${zip}`, (error, response, body) => {
                 expect(response.statusCode).to.equal(200)
+                done()
             })
-        done()        
-        })
+        }) 
     })
 }
 
