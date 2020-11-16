@@ -3,7 +3,6 @@ const expect = chai.expect
 const chaihttp = require('chai-http')
 const request = require('request')
 const server = require('../server')
-const Database = require('../db/db')
 chai.use(chaihttp)
 
 teste = (name,zip,website,file,url) => {
